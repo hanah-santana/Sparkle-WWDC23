@@ -10,10 +10,11 @@ struct UseMethodView: View {
     @State private var steps = 1.0
     var body: some View {
         VStack{
-            Text("Then, she decided to use the KonMari Method of organization. She started imaginating the life that she want to have and went for it.")
-            Text("Now, we need to help her, following the KonMari Method, so she can reduce things to the essentials, things that sparks joy to her.")
-            imgName
-            Text("Slide to help with the decluttering")
+            Text("She decided to use the KonMari Method of organization, started imaginating the life that she want to have and went for it. Now we can help her, following the KonMari Method, to reduce things to the essentials, things that sparks joy to her.\n\nUse the slider below to view the steps, helping with the decluttering process:")
+                .padding(.bottom,16)
+                .frame(alignment: .leading)
+            imageSteps
+                .padding(.bottom, 8)
             VStack{
                 Slider(value: $steps,
                        in: 1...5,
@@ -22,15 +23,28 @@ struct UseMethodView: View {
                        maximumValueLabel: Text("5"),
                        label: { Text("Steps") }
                 )
-            }.padding(80)
-            
+            }.padding(.horizontal, 8)
             NavigationStack{
-                NavigationLink(destination: JoyfulThingsView()) {Text("Done!")}
+                if steps == 5.0 {
+                    NavigationLink(destination: JoyfulThingsView()) {
+                        Text("Done!")
+                            .foregroundColor(.black)
+                            .bold()
+                    }.buttonStyle(.borderedProminent)
+                } else {
+                    NavigationLink(destination: JoyfulThingsView()) {
+                        Text("Done!")
+                            .foregroundColor(.black)
+                            .bold()
+                    }.buttonStyle(.bordered)
+                    .disabled(steps != 5)
+                }
             }.navigationTitle("Using The KonMari Method")
-        }.padding(16)
+        }
     }
+    
     @ViewBuilder
-    var imgName: some View {
+    var imageSteps: some View {
         switch steps{
         case 1.0:
             imagePlacer(image: "Slider1")
@@ -49,7 +63,6 @@ struct UseMethodView: View {
             Text("And, finally, with the sentimental items.")
         default:
             Image("circle.fill")
-                
         }
     }
     func imagePlacer(image: String) -> some View{

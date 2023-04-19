@@ -15,15 +15,12 @@ public struct PhotoSliderView: View {
             Text("Thank you for your help!")
                 .font(.title)
                 .bold()
+                .frame(alignment: .topLeading)
             Text("She gave space for things that matter, her house has spots with things that sparkle joy and bring good memories to her.")
             Text("Use the slider in the photo to see the difference.")
             PhotoSlider()
-            Text("And this made her feel happier, calmer and motivated.")
             Text("This method can be life changing for those who apply in their lives, not only in the organizational aspect.")
             Text("I also suggest you to give it a try! 😉")
-//            NavigationLink(destination: ContentView()){
-//                    Text("Restart")
-//                }
         }.padding(8)
     }
 }
