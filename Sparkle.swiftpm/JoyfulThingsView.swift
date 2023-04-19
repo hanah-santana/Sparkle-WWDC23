@@ -20,8 +20,6 @@ struct JoyfulThingsView: View {
                 NavigationLink(destination: ThankYouView()) {Text("Next")}
             }.navigationTitle("Space to what is important")
         }.padding(16)
-        
-        
     }
 }
 

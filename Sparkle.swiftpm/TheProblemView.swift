@@ -15,7 +15,7 @@ struct TheProblemView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
             NavigationStack{
-                NavigationLink(destination: UseMethodView()){Text("NEXT")}
+                NavigationLink(destination: UseMethodView()){Text("Next")}
             }.navigationTitle("Presenting Anna")
         }.padding(16)
     }
