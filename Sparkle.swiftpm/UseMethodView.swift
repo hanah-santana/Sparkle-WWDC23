@@ -25,7 +25,7 @@ struct UseMethodView: View {
             }.padding(80)
             
             NavigationStack{
-                NavigationLink(destination: JoyfulThingsView()) {Text("Next")}
+                NavigationLink(destination: JoyfulThingsView()) {Text("Done!")}
             }.navigationTitle("Using The KonMari Method")
         }.padding(16)
     }
