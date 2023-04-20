@@ -15,12 +15,15 @@ public struct PhotoSliderView: View {
                 Text("She gave space for things that matter, her house has spots with things that sparkle joy and bring good memories to her.")
                 Text("Use the slider in the photo to see the difference.✨")
                 PhotoSlider()
-                Text("This method can be lifechanging! I suggest you to give it a try. 😉")
+                    .padding(16)
+                Text("This method can be life changing! I suggest you to give it a try. 😉")
             }
             HStack{
                 
                 NavigationLink(destination: ContentView()){
                     Text("Restart")
+                        .bold()
+                        .foregroundColor(.black)
                 }.buttonStyle(.borderedProminent)
                     .padding(.horizontal,8)
                 NavigationLink(destination: CreditsView()){
@@ -169,9 +172,8 @@ fileprivate struct ImageForSlider: View {
     }
 }
 
-struct P276_ImageSlider_Previews: PreviewProvider {
+struct ImageSlider: PreviewProvider {
     static var previews: some View {
         PhotoSliderView()
     }
 }
-
