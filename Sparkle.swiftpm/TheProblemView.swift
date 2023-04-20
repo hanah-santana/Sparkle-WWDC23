@@ -10,7 +10,7 @@ import SwiftUI
 struct TheProblemView: View {
     var body: some View {
         VStack{
-            Text("Anna is a very active person, she tried many times to organize her house, but no matter how much she tries, she always have a sense of chaos, her house always feels messy.")
+            Text("Anna is a very active person. She tried many times to organize her house, but no matter how much she tries, she always have a sense of chaos, her house always feels messy.")
                 .frame(alignment: .leading)
                 //.padding(.bottom,16)
             Image("nonJoyfulHouseImg")

@@ -23,5 +23,6 @@ struct ContentView: View {
             }.buttonStyle(.borderedProminent)
              .navigationTitle("The KonMari Method")
         }.padding(16)
+        .navigationBarBackButtonHidden(true)
     }
 }

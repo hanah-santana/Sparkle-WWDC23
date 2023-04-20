@@ -10,7 +10,7 @@ struct UseMethodView: View {
     @State private var steps = 1.0
     var body: some View {
         VStack{
-            Text("She decided to use the KonMari Method of organization, started imaginating the life that she want to have and went for it. Now we can help her, following the KonMari Method, to reduce things to the essentials, things that sparks joy to her.\n\nUse the slider below to view the steps, helping with the decluttering process:")
+            Text("She decided to use the KonMari Method of organization, started to imagine the life that she want to have and went for it. Now we can help her, following the KonMari Method, to reduce things to the essentials, things that sparks joy to her.\n\nUse the slider below to view the steps, helping with the decluttering process:")
                 .padding(.bottom,16)
                 .frame(alignment: .leading)
             imageSteps
@@ -40,7 +40,7 @@ struct UseMethodView: View {
                     .disabled(steps != 5)
                 }
             }.navigationTitle("Using The KonMari Method")
-        }
+        }.padding(16)
     }
     
     @ViewBuilder
@@ -48,13 +48,13 @@ struct UseMethodView: View {
         switch steps{
         case 1.0:
             imagePlacer(image: "Slider1")
-            Text("She gathered all her clothes together, and kept with her only those that sparks joy.")
+            Text("She gathered all her clothes together, and kept with her only those that spark joy.")
         case 2.0:
             imagePlacer(image: "Slider2")
-            Text("She did the same thing with books.")
+            Text("She gathered all her books, and also kept only those that spark joy.")
         case 3.0:
             imagePlacer(image: "Slider3")
-            Text("Then with papers.")
+            Text("She did the same with papers.")
         case 4.0:
             imagePlacer(image: "Slider4")
             Text("With Komono, that are understood by us as miscellaneous.")

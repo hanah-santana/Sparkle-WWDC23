@@ -12,9 +12,9 @@ struct JoyfulThingsView: View {
         NavigationStack{
             VStack {
                 VStack(alignment: .leading){
-                    Text("After decluttering, she noticed that her house has more space to what is actually important to her: gifts, throphies, photos, stones and so on.")
+                    Text("After decluttering, she noticed that her house has more space to what is actually important too, like gifts, throphies, photos, stones and so on.")
                         .padding(.bottom,8)
-                    Text("Even though they have no practical utility as tools, they sparkle joy to her and no longer need to be stored inside a box.\nShe noticed that hey now can have designated spaces arround the house.")
+                    Text("Even though they have no practical utility as tools, they sparkle joy to her and no longer need to be stored inside a box.\nShe realized that she can designate special places for them, arround the house.")
                         
                 }.navigationTitle("Space to what is important")
                 .padding(.bottom,16)

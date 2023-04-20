@@ -9,19 +9,27 @@ import SwiftUI
 
 public struct PhotoSliderView: View {
     public init() { }
-    
     public var body: some View {
-        VStack{
-            Text("Thank you for your help!")
-                .font(.title)
-                .bold()
-                .frame(alignment: .topLeading)
-            Text("She gave space for things that matter, her house has spots with things that sparkle joy and bring good memories to her.")
-            Text("Use the slider in the photo to see the difference.")
-            PhotoSlider()
-            Text("This method can be life changing for those who apply in their lives, not only in the organizational aspect.")
-            Text("I also suggest you to give it a try! 😉")
-        }.padding(8)
+        NavigationStack{
+            VStack(){
+                Text("She gave space for things that matter, her house has spots with things that sparkle joy and bring good memories to her.")
+                Text("Use the slider in the photo to see the difference.✨")
+                PhotoSlider()
+                Text("This method can be lifechanging! I suggest you to give it a try. 😉")
+            }
+            HStack{
+                
+                NavigationLink(destination: ContentView()){
+                    Text("Restart")
+                }.buttonStyle(.borderedProminent)
+                    .padding(.horizontal,8)
+                NavigationLink(destination: CreditsView()){
+                    Text("Credits")
+                }.buttonStyle(.borderless)
+                    .padding(.horizontal,8)
+            }
+        }.navigationTitle("Thank you for your help!")
+            .padding(16)
     }
 }
 
